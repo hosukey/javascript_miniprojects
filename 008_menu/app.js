@@ -65,27 +65,57 @@ const menu = [
 ];
 
 const menuitems = document.querySelector('.menuitems');
+const filterBtns = document.querySelectorAll('.filter-btn')
 
+//load items
 window.addEventListener('DOMContentLoaded', function(){
-  let displayMenu = menu.map(function(item){
-return `<div class="item">
-<div class="item__image">
-  <img src = ${item.img}
-    alt=""
-  />
-</div>
-<div class="item__contents">
-  <div class="item__contents--title">
-    <h3>${item.title}</h3>
-    <div class="price">${item.price}</div>
-  </div>
-  <div class="line"></div>
-  <div class="item__contents--desc">
- ${item.desc}
-  </div>
-</div>
-</div>`
-  });
-  displayMenu = displayMenu.join('');
-  menuitems.innerHTML = displayMenu
+displayMenuItems(menu);
 });
+
+//filter items
+filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(e){
+        console.log(e.currentTarget.dataset.id);
+        const category = e.currentTarget.dataset.id;
+        const menuCategory = menu.filter(function(menuItem){
+            // console.log(menuItem.category);
+
+            if(menuItem.category === category){
+                return menuItem;
+            }
+        });
+        // console.log(menuCategory);
+        if(category === 'all'){
+            displayMenuItems(menu)
+        }
+        else{
+            displayMenuItems(menuCategory);
+        }
+    });
+});
+
+
+function displayMenuItems(menuItems){
+    let displayMenu = menuItems.map(function(item){
+        return `<div class="item">
+        <div class="item__image">
+          <img src = ${item.img}
+            alt=""
+          />
+        </div>
+        <div class="item__contents">
+          <div class="item__contents--title">
+            <h3>${item.title}</h3>
+            <div class="price">${item.price}</div>
+          </div>
+          <div class="line"></div>
+          <div class="item__contents--desc">
+         ${item.desc}
+          </div>
+        </div>
+        </div>`
+    });
+    displayMenu = displayMenu.join('');
+    menuitems.innerHTML = displayMenu
+}
+
