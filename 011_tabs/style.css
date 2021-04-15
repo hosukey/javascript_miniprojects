@@ -1,0 +1,119 @@
+@import 'reset.css';
+
+body {
+  background-color: ghostwhite;
+}
+header {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+header p {
+  padding: 20px;
+}
+
+.spotify {
+  color: #1bb352;
+  font-weight: 600;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+/* image */
+img {
+  border-radius: 6px;
+  margin: 0 20px;
+  height: 100%;
+}
+
+/* contents */
+.container {
+  margin-right: 20px;
+  max-width: 600px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  height: 40px;
+}
+
+.contents {
+  background-color: white;
+  padding: 30px;
+  border-radius: 0 0 6px 6px;
+}
+
+.contents__title {
+  margin-bottom: 18px;
+}
+
+.contents__desc {
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.buttons__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  background-color: rgb(207, 207, 207);
+  height: 100%;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.buttons__btn:hover {
+  background-color: rgb(92, 92, 92);
+  color: white;
+}
+
+.buttons__btn:first-child {
+  border-radius: 6px 0 0 0;
+}
+
+.buttons__btn:nth-child(3) {
+  border-radius: 0 6px 0 0;
+}
+
+.buttons .active {
+  background-color: white;
+  transition: all 0.3s ease-in;
+}
+
+.buttons .active:hover {
+  color: black;
+}
+
+.contents {
+  display: none;
+}
+
+.contents.active {
+  display: block;
+}
+
+/* media query */
+@media only screen and (max-width: 600px) {
+  .main {
+    flex-direction: column;
+  }
+
+  img {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .container {
+    margin: 20px;
+  }
+}
