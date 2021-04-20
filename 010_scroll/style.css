@@ -1,0 +1,153 @@
+@import url(reset.css);
+
+/* menu */
+.topmenu {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #181e34;
+  color: #eff8f3;
+  align-items: center;
+}
+
+.topmenu__left .logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.topmenu__right {
+  align-items: center;
+
+  display: flex;
+}
+
+.topmenu__right--list {
+  display: flex;
+}
+
+.topmenu__right--list li {
+  margin-left: 18px;
+  font-size: 14px;
+}
+
+.topmenu__right--login {
+  margin-left: 30px;
+}
+
+.topmenu__right--login button {
+  background-color: #35a0b1;
+  padding: 10px;
+  color: white;
+  border-radius: 18px;
+  width: 80px;
+}
+
+.hamburger {
+  position: absolute;
+  right: 20px;
+  top: 19px;
+  display: none;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: rotate(180deg);
+}
+
+/* sections */
+#sections {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+}
+
+#section1 {
+  display: grid;
+  place-items: center;
+  height: 700px;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(62deg, #8ec5fc 0%, #e0c3fc 50%);
+}
+
+#section2 {
+  display: grid;
+  place-items: center;
+  height: 800px;
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7d 100%);
+}
+
+#section3 {
+  display: grid;
+  place-items: center;
+  height: 900px;
+  background-color: #08aeea;
+  background-image: linear-gradient(0deg, #08aeea 0%, #2af598 100%);
+}
+
+#section4 {
+  display: grid;
+  place-items: center;
+  height: 800px;
+  background-color: #3eecac;
+  background-image: linear-gradient(19deg, #3eecac 0%, #ee74e1 100%);
+}
+
+/* footer */
+.footer {
+  height: 300px;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  display: grid;
+  place-items: center;
+}
+
+/* media queries */
+@media only screen and (max-width: 600px) {
+  .topmenu__right {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-block;
+  }
+
+  .hamburger .close-menu {
+    display: none;
+  }
+
+  .topmenu__right.active {
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .topmenu__right--list {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .topmenu__right--list li {
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .topmenu__right--list:first-child {
+    margin-top: 40px;
+  }
+
+  .topmenu__right--login {
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 40px;
+  }
+
+  .topmenu {
+    flex-direction: column;
+  }
+}
