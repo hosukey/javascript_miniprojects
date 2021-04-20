@@ -1,22 +1,19 @@
 const container = document.querySelector('.container');
 const btns = document.querySelectorAll('.buttons__btn');
-const articles = document.querySelectorAll('.contents');
+const contents = document.querySelectorAll('.contents');
 
 container.addEventListener('click', function(e){
-    const id = e.target.dataset.id;
-    // console.log(id);
-    if(id){
-        //remove active from other buttons
+    const target = e.target.dataset.id;
+    if(target){
         btns.forEach(function(btn){
             btn.classList.remove('active');
             e.target.classList.add('active');
-        });
-
-        //hide other articles
-        articles.forEach(function(article){
-            article.classList.remove('active')
         })
-        const element = document.getElementById(id);
-        element.classList.add('active');
+
+        contents.forEach(function(content){
+            content.classList.remove('active')
+        })
+        const grabId = document.getElementById(target);
+        grabId.classList.add('active');
     }
-});
+})
