@@ -34,8 +34,31 @@ menu.forEach(function(menuItem){
                 behavior: 'smooth'
             })
         }
-            
-        
     })
-    
 })
+
+//GO BACK TO TOP OF THE PAGE BUTTON
+//get the height of the nav
+//button - display none - at the beginning
+//active it when scrolled down and passed nav height
+//when click, back to coordinate 0,0
+
+const nav = document.querySelector('.topmenu');
+navHeight = nav.getBoundingClientRect();
+const upBtn = document.querySelector('.up');
+
+window.addEventListener('scroll',function(){
+if(document.documentElement.scrollTop > navHeight.height-1){
+    upBtn.classList.remove('remove');
+}else{
+    upBtn.classList.add('remove');
+}
+});
+
+upBtn.addEventListener('click', function(){
+    window.scrollTo({
+        top:0,
+        behavior: 'smooth'
+    });
+})
+

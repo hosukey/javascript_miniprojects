@@ -28,6 +28,7 @@
 .topmenu__right--list li {
   margin-left: 18px;
   font-size: 14px;
+  cursor: pointer;
 }
 
 .topmenu__right--login {
@@ -50,6 +51,7 @@
   color: white;
   font-size: 20px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .hamburger:hover {
@@ -96,6 +98,32 @@
   background-image: linear-gradient(19deg, #3eecac 0%, #ee74e1 100%);
 }
 
+/* up button */
+body {
+  position: relative;
+}
+.up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 3px solid teal;
+  color: teal;
+  border-radius: 10px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+.up:hover {
+  color: #eff8f3;
+  border: 3px solid #eff8f3;
+}
+
+.up.remove {
+  display: none;
+}
 /* footer */
 .footer {
   height: 300px;
