@@ -1,0 +1,140 @@
+@import url('reset.css');
+
+:root {
+  --main-background-color: #f0f0f0;
+  --font-color: #003682;
+  --background-color: #408bc9;
+  --point-color: #181e34;
+}
+
+body {
+  background-color: var(--background-color);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--font-color);
+}
+.container {
+  background-color: var(--main-background-color);
+  width: 500px;
+  padding: 20px;
+  max-height: 584px;
+  position: relative;
+}
+
+/* item added pop up */
+
+.itemadded {
+  position: absolute;
+  left: 100px;
+  top: -10px;
+  width: 300px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--point-color);
+  padding: 8px;
+  color: white;
+  font-size: 14px;
+  /* display: none; */
+}
+
+header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+/* input form */
+
+.listform {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.write {
+  padding: 10px;
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+}
+
+input {
+  color: var(--background-color);
+}
+
+.submitbutton {
+  height: 40px;
+  width: 100px;
+  border-radius: 20px;
+  border: none;
+  background: var(--point-color);
+  color: var(--main-background-color);
+  cursor: pointer;
+}
+
+/* grocery list */
+.grocery::-webkit-scrollbar {
+  width: 8px;
+}
+
+.grocery::-webkit-scrollbar-thumb {
+  background-color: var(--background-color);
+  border-radius: 6px;
+}
+
+.grocery {
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.grocery__items--item {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.grocery__items--item:hover {
+  background-color: var(--point-color);
+  color: var(--main-background-color);
+}
+
+.item {
+  padding-left: 16px;
+}
+
+.item__right {
+  padding-right: 16px;
+}
+
+.item__right span {
+  cursor: pointer;
+}
+
+.fas:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* clear items */
+
+.clear {
+  /* display: none; */
+  text-align: center;
+}
+
+.clear button {
+  color: var(--point-color);
+  margin-top: 16px;
+}
+
+.delete {
+  margin-left: 14px;
+}

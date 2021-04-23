@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grocery List</title>
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e8644e93da.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+        
+      <div class="itemadded">
+            item added to the list
+      </div>
+
+      <header>
+        <h1>🛒 shopping.list 💙 </h1>
+        <form action="" class="listform">
+          <input type="text" placeholder="apple" class="write"> 
+          <input type="submit" class="submitbutton">
+      </header>
+
+      <div class="grocery">
+          <ul class="grocery__items">
+              <li class="grocery__items--item">
+                  <span class="item">Banana</span>
+                  <div class="item__right">
+                    <span class="modify"><i class="fas fa-wrench"></i></span>
+                    <span class="delete"><i class="fas fa-trash"></i></span>
+                  </div>
+              </li>
+          </ul>
+
+          <ul class="grocery__items">
+            <li class="grocery__items--item">
+                <span class="item">Oranges</span>
+                <div class="item__right">
+                  <span class="modify"><i class="fas fa-wrench"></i></span>
+                  <span class="delete"><i class="fas fa-trash"></i></span>
+                </div>
+            </li>
+        </ul>
+
+
+        
+ 
+
+
+      
+      </div>
+
+      <div class="clear">
+          <button class="clearitems">🗑 Clear Items</button>
+      </div>
+    </div>
+  </body>
+</html>
